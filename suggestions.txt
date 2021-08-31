@@ -1,7 +1,8 @@
-1 - Ecoute réseau 1 fois par heure
+1 - Ecoute réseau 1 fois par heure (time.sleep(1800) (30 min))
 2 - liste de fichiers pour comparaisons
 3 - factorisation du code :
     a) fichier d'import
     b) fichier PATH
     c) automatiser production / développement pour définir routing
-    d) ÉCRIRE DES TESTS
+    d) ÉCRIRE DES TESTS - unittest
+
