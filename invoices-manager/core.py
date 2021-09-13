@@ -33,5 +33,5 @@ class File_manager:
 
 
 if __name__ == '__main__':
-    a = file_manager(paths.src, paths.fake_scan_ho, utils.test_file)
+    a = File_manager(paths.src, paths.fake_scan_ho, utils.test_file)
     a.testing_file_move()
