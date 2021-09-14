@@ -7,16 +7,16 @@ import paths
 import utils
 
 class File_manager:
-    def __init__(self, src, dest, file):
+    def __init__(self, src, dest, files):
         self.src = src
         self.dest = dest
-        self.file = file
+        self.files = files
     
     def copy_file(self):
-        shutil.copy(f'{self.src}/{self.file}', f'{self.dest}')
+        shutil.copy(f'{self.src}/{self.files}', f'{self.dest}')
     
     def move_file(self):
-        shutil.move(f'{self.src}/{self.file}', f'{self.src}/archives')
+        shutil.move(f'{self.src}/{self.files}', f'{self.src}/archives')
     
     def duplicate_file(self):
         self.copy_file()
@@ -26,8 +26,8 @@ class File_manager:
         self.duplicate_file()
 
         time.sleep(3)
-        shutil.move(f'{self.src}/archives/{self.file}', f'{self.src}/{self.file}')
-        os.remove(f'{self.dest}/{self.file}')
+        shutil.move(f'{self.src}/archives/{self.files}', f'{self.src}/{self.files}')
+        os.remove(f'{self.dest}/{self.files}')
 
 
 
