@@ -1,3 +1,4 @@
+# Change the value by False for production
 is_dev = True
 
 src = './directory-testing/main' # Replace by /Desktop (find absolute path) in production mode
