@@ -11,15 +11,13 @@ class File_manager:
         self.src = src
         self.dest = dest
         self.waiting = paths.waiting
-        
-        if files:
-            self.files = files
-        else:
-            self.files = os.listdir(self.src)
-            print(self.files)
-            quit()
+        self.files = os.listdir(self.src)
+        self.files_length = len(self.files)
         
 
+    """ 
+    Getters
+    """
     def get_src(self):
         return self.src
     
@@ -31,12 +29,21 @@ class File_manager:
     
     def get_waiting(self):
         return self.waiting
+
+    def get_files_length(self):
+        return self.files_length
     
+
+    """
+    Methods
+    """
     def copy_file(self):
-        shutil.copy(f'{self.src}/{self.files}', f'{self.dest}')
+        for i in range(self.files_length):
+            shutil.copy(f'{self.src}/{self.files[i-1]}', f'{self.dest}')
     
     def move_file(self):
-        shutil.move(f'{self.src}/{self.files}', f'{self.waiting}')
+        for i in range(self.files_length):
+            shutil.move(f'{self.src}/{self.files[i-1]}', f'{self.waiting}')
     
     def duplicate_file(self):
         self.copy_file()
@@ -46,12 +53,14 @@ class File_manager:
         self.duplicate_file()
 
         time.sleep(3)
-        shutil.move(f'{self.waiting}/{self.files}', f'{self.src}/{self.files}')
-        os.remove(f'{self.dest}/{self.files}')
+
+        for i in range(self.files_length):
+            shutil.move(f'{self.waiting}/{self.files[i-1]}', f'{self.src}')
+            os.remove(f'{self.dest}/{self.files[i-1]}')
 
 
 
 
 if __name__ == '__main__':
-    a = File_manager(paths.src, paths.scan_ho, utils.test_file)
+    a = File_manager(paths.src, paths.scan_ho, utils.test_files)
     a.testing_file_move()
