@@ -7,11 +7,18 @@ import paths
 import utils
 
 class File_manager:
-    def __init__(self, src, dest, files):
+    def __init__(self, src, dest, files=False):
         self.src = src
         self.dest = dest
-        self.files = files
-        self.waiting = self.src + "/waiting"
+        self.waiting = paths.waiting
+        
+        if files:
+            self.files = files
+        else:
+            self.files = os.listdir(self.src)
+            print(self.files)
+            quit()
+        
 
     def get_src(self):
         return self.src

@@ -1,9 +1,11 @@
 # Change the value by False for production
 is_dev = True
 
-src = './directory-testing/main' # Replace by /Desktop (find absolute path) in production mode
+data = './data'
+src = f'{data}/main'
+waiting = f'{data}/waiting'
 
 if is_dev:
-    scan_ho = './directory-testing/scan-ho'
+    scan_ho = f'{data}/scan-ho'
 else:
-    scan_ho = '//PC01-LANGELIER/Scan Ho' # The Head Office repository dist
+    scan_ho = '//PC01-LANGELIER/Scan Ho'
