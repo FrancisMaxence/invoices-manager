@@ -6,4 +6,4 @@ A Script to manage invoices file scanned and move to Head Office repository
 ## For "Les Marchés d'aliments naturels et biologique TAU"
 
 ## Setup
-For devlopment, set **is_dev** variable by *True*,*False for production*.
+For devlopment, set **is_dev** variable by *True*,*False* for production.
