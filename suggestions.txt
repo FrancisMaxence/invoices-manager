@@ -1,5 +1,6 @@
 1 - Ecoute réseau 1 fois par heure (time.sleep(1800) (30 min))
-2 - liste de fichiers pour comparaisons (filecmp module)
-3 - factorisation du code :
-    a) ÉCRIRE DES TESTS - unittest
+2 - écrire méthode de comparaisons entre "waiting" et "scan_ho"
+3 - Écrire déplacements de fichier
+4 - Rendre le script exécutable
+5 - ÉCRIRE DES TESTS - unittest
 
