@@ -22,6 +22,7 @@ class TestFileManager(unittest.TestCase):
             self.assertEqual(fm.get_scan_ho(), dev_scan_ho)
         else:
             self.assertEqual(fm.get_scan_ho(), prod_scan_ho)
+
     
     def test_waiting_name(self):
         self.assertEqual(fm.get_waiting(), waiting)
