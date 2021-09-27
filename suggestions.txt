@@ -1,6 +1,3 @@
 1 - Ecoute réseau 1 fois par heure (time.sleep(1800) (30 min))
-2 - écrire méthode de comparaisons entre "waiting" et "scan_ho"
-3 - Écrire déplacements de fichier
-4 - Rendre le script exécutable
-5 - ÉCRIRE DES TESTS - unittest
-
+2 - Rendre le script exécutable
+3 - ÉCRIRE DES TESTS - unittest

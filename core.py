@@ -5,7 +5,7 @@ import time
 # Custom modules for tests
 import paths
 
-class File_manager:
+class FileManager:
     def __init__(self):
         self.archives = paths.archives
         self.main = paths.main
@@ -68,5 +68,5 @@ class File_manager:
 
 
 if __name__ == '__main__':
-    a = File_manager()
+    a = FileManager()
     a.testing_file_move()
