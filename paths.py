@@ -1,10 +1,11 @@
+data = './data'
+archives = f'{data}/archives'
+main = f'{data}/main'
+waiting = f'{data}/waiting'
+
 # Change the value by False for production
 is_dev = True
-
-data = './data'
-src = f'{data}/main'
-waiting = f'{data}/waiting'
-archives = f'{data}/archives'
+scan_ho = ''
 
 if is_dev:
     scan_ho = f'{data}/scan-ho'
