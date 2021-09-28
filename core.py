@@ -32,22 +32,20 @@ class FileManager:
     Methods
     """
     def duplicate_file(self):
-        main_list = os.listdir(paths.main)
-        main_length = len(main_list)
+        main_files = os.listdir(paths.main)
         
-        for i in range(main_length):
-            shutil.copy(f'{self.main}/{main_list[i-1]}', f'{self.scan_ho}')
-            shutil.move(f'{self.main}/{main_list[i-1]}', f'{self.waiting}')
+        for main_file in main_files:
+            shutil.copy(f'{self.main}/{main_file}', f'{self.scan_ho}')
+            shutil.move(f'{self.main}/{main_file}', f'{self.waiting}')
     
     
     def archive_files(self):
-        waiting_list = os.listdir(self.waiting)
-        scan_ho_list = os.listdir(self.scan_ho)
-        waiting_length = len(waiting_list)
+        waiting_files = os.listdir(self.waiting)
+        scan_ho_files = os.listdir(self.scan_ho)
 
-        if waiting_list != scan_ho_list:
-            for i in range(waiting_length):
-                shutil.move(f'{self.waiting}/{waiting_list[i-1]}', f'{self.archives}')
+        if waiting_files != scan_ho_files:
+            for waiting_file in waiting_files:
+                shutil.move(f'{self.waiting}/{waiting_file}', f'{self.archives}')
 
             self.duplicate_file()
 
@@ -56,13 +54,14 @@ class FileManager:
 
         time.sleep(3)
 
-        waiting_list = os.listdir(self.waiting)
-        scan_ho_list = os.listdir(self.scan_ho)
-        waiting_length = len(waiting_list)
+        waiting_files = os.listdir(self.waiting)
+        scan_ho_files = os.listdir(self.scan_ho)
 
-        for i in range(waiting_length):
-            shutil.move(f'{self.waiting}/{waiting_list[i-1]}', f'{self.main}')
-            os.remove(f'{self.scan_ho}/{scan_ho_list[i-1]}')
+        for waiting_file in waiting_files:
+            shutil.move(f'{self.waiting}/{waiting_file}', f'{self.main}')
+        
+        for scan_ho_file in scan_ho_files:
+            os.remove(f'{self.scan_ho}/{scan_ho_file}')
 
 
 
