@@ -4,8 +4,11 @@ pc01 = './/PC01-LANGELIER'
 main = f'{data}/main'
 waiting = f'{data}/waiting'
 
-# Change the value by False for production
+################################################
+##  Change the value by False for production  ##
+################################################
 is_dev = True
+
 scan_ho = ''
 archives = ''
 
