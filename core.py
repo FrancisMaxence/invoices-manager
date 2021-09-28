@@ -43,10 +43,21 @@ class FileManager:
         waiting_files = os.listdir(self.waiting)
         scan_ho_files = os.listdir(self.scan_ho)
 
-        if waiting_files != scan_ho_files:
+        if len(waiting_files) == 0 and len(scan_ho_files) == 0:
+            #self.testing_file_move()
+            
+            self.duplicate_file()
+        elif len(waiting_files) == 0 and len(scan_ho_files) > 0:
+            #self.testing_file_move()
+            
+            self.duplicate_file()
+        elif waiting_files != scan_ho_files:
             for waiting_file in waiting_files:
                 shutil.move(f'{self.waiting}/{waiting_file}', f'{self.archives}')
-
+            
+            #time.sleep(3)
+            #self.testing_file_move()
+            
             self.duplicate_file()
 
     def testing_file_move(self):
