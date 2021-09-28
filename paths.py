@@ -1,13 +1,17 @@
 data = './data'
-archives = f'{data}/archives'
+pc01 = './/PC01-LANGELIER'
+
 main = f'{data}/main'
 waiting = f'{data}/waiting'
 
 # Change the value by False for production
 is_dev = True
 scan_ho = ''
+archives = ''
 
 if is_dev:
+    archives = f'{data}/archives'
     scan_ho = f'{data}/scan-ho'
 else:
-    scan_ho = '//PC01-LANGELIER/Scan Ho'
+    scan_ho = f'{pc01}/Scan Ho'
+    archives = f'{pc01}/Archives Factures'
