@@ -1,5 +1,7 @@
+import os
+
 data = './data'
-pc01 = './/PC01-LANGELIER'
+pc01 = f'//{os.environ["COMPUTERNAME"]}'
 
 main = f'{data}/main'
 waiting = f'{data}/waiting'
