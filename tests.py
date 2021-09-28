@@ -7,7 +7,6 @@ data = './data'
 archives = f'{data}/archives'
 main = f'{data}/main'
 scan_ho = f'{data}/scan-ho'
-prod_scan_ho = '//PC01-LANGELIER/Scan Ho'
 waiting = f'{data}/waiting'
 
 class TestFileManager(unittest.TestCase):
