@@ -1,6 +1,5 @@
 import unittest
 import core
-import paths
 
 fm = core.FileManager()
 data = './data'
@@ -10,16 +9,16 @@ scan_ho = f'{data}/scan-ho'
 waiting = f'{data}/waiting'
 
 class TestFileManager(unittest.TestCase):
-    def test_archives_name(self):
+    def test_archives_path(self):
         self.assertEqual(fm.get_archives(), archives)
 
-    def test_main_name(self):
+    def test_main_path(self):
         self.assertEqual(fm.get_main(), main)
     
-    def test_scan_ho_name(self):
+    def test_scan_ho_path(self):
         self.assertEqual(fm.get_scan_ho(), scan_ho)
     
-    def test_waiting_name(self):
+    def test_waiting_path(self):
         self.assertEqual(fm.get_waiting(), waiting)
 
 
