@@ -1,3 +1,5 @@
+import os
+import time
 import unittest
 
 from filemanager import FileManager
@@ -8,6 +10,7 @@ archives = f'{data}/archives'
 main = f'{data}/main'
 scan_ho = f'{data}/scan-ho'
 waiting = f'{data}/waiting'
+
 
 class TestFileManager(unittest.TestCase):
     def test_archives_path(self):
@@ -21,7 +24,14 @@ class TestFileManager(unittest.TestCase):
     
     def test_waiting_path(self):
         self.assertEqual(fm.get_waiting(), waiting)
+    
+    def test_duplicate_file(self):
+        pass
+
+    def test_archive_files(self):
+        pass
 
 
 if __name__ == '__main__':
     unittest.main()
+   
