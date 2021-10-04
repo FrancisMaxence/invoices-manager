@@ -75,8 +75,6 @@ class FileManager:
             os.remove(f'{self.scan_ho}/{scan_ho_file}')
 
 
-
-
 if __name__ == '__main__':
     a = FileManager()
     a.testing_file_move()
