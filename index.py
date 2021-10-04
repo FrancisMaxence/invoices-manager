@@ -1,4 +1,4 @@
 # modules
-import core
+from filemanager import FileManager
 
-fm = core.FileManager()
+fm = FileManager()

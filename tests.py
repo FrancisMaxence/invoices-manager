@@ -1,7 +1,8 @@
 import unittest
-import core
 
-fm = core.FileManager()
+from filemanager import FileManager
+
+fm = FileManager()
 data = './data'
 archives = f'{data}/archives'
 main = f'{data}/main'
