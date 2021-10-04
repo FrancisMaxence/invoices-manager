@@ -2,4 +2,6 @@
 2 - Écrire des commentaires
 3 - Rendre le script exécutable
 4 - ÉCRIRE DES TESTS - unittest
-5 - Refactoriser FileManager.archive_files() : Mettre les conditions dans index.py, ne garder que la boucle d'archivage
+5 - Refactoriser FileManager.archive_files()
+    Mettre les conditions dans index.py
+    ne garder que la boucle d'archivage
