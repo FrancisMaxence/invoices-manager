@@ -42,7 +42,16 @@ class TestFileManager(unittest.TestCase):
         
 
     def test_archive_files(self):
-        pass
+        for file in files:
+            with open(f'{waiting}/{file}', 'a'):
+                pass
+        
+        fm.archive_files()
+
+        self.assertEqual(os.listdir(archives), files)
+
+        for file in files:
+            os.remove(f'{archives}/{file}')
 
 
 if __name__ == '__main__':
