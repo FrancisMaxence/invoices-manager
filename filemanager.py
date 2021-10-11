@@ -27,4 +27,3 @@ class FileManager:
 
         for waiting_file in waiting_files:
             shutil.move(f'{self.waiting}/{waiting_file}', f'{self.archives}')
-
