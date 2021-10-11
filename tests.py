@@ -13,18 +13,6 @@ files = ['file1.txt','file2.txt', 'file3.txt']
 
 
 class TestFileManager(unittest.TestCase):
-    def test_archives_path(self):
-        self.assertEqual(fm.get_archives(), archives)
-
-    def test_main_path(self):
-        self.assertEqual(fm.get_main(), main)
-    
-    def test_scan_ho_path(self):
-        self.assertEqual(fm.get_scan_ho(), scan_ho)
-    
-    def test_waiting_path(self):
-        self.assertEqual(fm.get_waiting(), waiting)
-    
     def test_duplicate_file(self):
         for file in files:
             with open(f'{main}/{file}', 'a'):
