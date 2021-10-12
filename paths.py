@@ -1,6 +1,7 @@
 import os
 
-data = './data'
+# Find a better way to access to this directory
+data = 'C:/Users/Caisse/Desktop/vincent/codes/invoices-manager/data'
 pc01 = f'//{os.environ["COMPUTERNAME"]}'
 
 main = f'{data}/main'
