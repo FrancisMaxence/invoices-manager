@@ -1,7 +1,6 @@
 import os
 import shutil
 
-# Custom modules for tests
 import paths
 
 class FileManager:
