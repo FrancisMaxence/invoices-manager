@@ -2,6 +2,7 @@ import os
 import unittest
 import sys
 
+# Allow user to launch tests in root or tests directory
 if 'tests' not in os.getcwd():
     sys.path.insert(1, os.getcwd())
     data = './data'
