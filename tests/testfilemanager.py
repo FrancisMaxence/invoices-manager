@@ -1,12 +1,17 @@
 import os
 import unittest
 import sys
-sys.path.insert(1, os.getcwd())
+
+if 'tests' not in os.getcwd():
+    sys.path.insert(1, os.getcwd())
+    data = './data'
+else:
+    sys.path.insert(1, os.path.dirname(os.getcwd()))
+    data = '../data'
 
 from filemanager import FileManager
 
 fm = FileManager()
-data = './data'
 archives = f'{data}/archives'
 main = f'{data}/main'
 scan_ho = f'{data}/scan-ho'
@@ -44,5 +49,5 @@ class TestFileManager(unittest.TestCase):
 
 
 if __name__ == '__main__':
-    unittest.main()
+    unittest.main(verbosity=2)
    
