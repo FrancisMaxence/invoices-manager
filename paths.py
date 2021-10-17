@@ -1,8 +1,7 @@
 import os
 
-# Find a better way to access to this directory
 data = f'{os.environ["USERPROFILE"]}/Desktop/vincent/codes/invoices-manager/data'
-pc01 = os.environ["LOGONSERVER"] # replace by os.environ["LOGONSERVER"] ?
+pc01 = os.environ["LOGONSERVER"]
 
 main = f'{data}/main'
 waiting = f'{data}/waiting'
