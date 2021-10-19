@@ -1,5 +1,7 @@
 import os
 import unittest
+
+# move to testsetup.py
 import sys
 
 # Allow user to launch tests in root or tests directory
@@ -18,9 +20,11 @@ main = f'{data}/main'
 scan_ho = f'{data}/scan-ho'
 waiting = f'{data}/waiting'
 files = ['file1.txt','file2.txt', 'file3.txt']
-
+# import testsetup.py
 
 class TestFileManager(unittest.TestCase):
+    # Try setup() to use testsetup.py
+
     def test_duplicate_file(self):
         # Setup
         for file in files:
