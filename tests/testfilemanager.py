@@ -10,7 +10,7 @@ else:
     sys.path.insert(1, os.path.dirname(os.getcwd()))
     data = '../data'
 
-from filemanager import FileManager
+from core.filemanager import FileManager
 
 fm = FileManager()
 archives = f'{data}/archives'

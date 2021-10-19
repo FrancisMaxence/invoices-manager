@@ -1,7 +1,7 @@
 import os
 
 # modules
-from filemanager import FileManager
+from core.filemanager import FileManager
 
 fm = FileManager()
 
