@@ -11,9 +11,6 @@ def compare_directories():
 
     if waiting_len == 0 and scan_ho_len == 0:
         fm.duplicate_file()
-    elif waiting_len == 0 and scan_ho_len > 0:
-        # Is it really usefull ?
-        fm.duplicate_file()
-    elif waiting_files != scan_ho_files:
+    elif waiting_len > 0 and scan_ho_len == 0:
         fm.archive_files()
         fm.duplicate_file()
