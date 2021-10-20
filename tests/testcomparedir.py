@@ -1,7 +1,7 @@
-# import testsetup
-# use Setup() to initialize test ?
-
 import unittest
+
+from testsetup import *
+
 
 class TestCompareDirectories(unittest.TestCase):
     def test_waiting_and_scan_ho_empty(self):

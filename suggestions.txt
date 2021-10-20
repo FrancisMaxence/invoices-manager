@@ -1,7 +1,7 @@
 1 - Ecoute réseau toutes les 30 minutes (time.sleep(1800) (30 min))
 2 - Écrire des commentaires
 3 - Rendre le script exécutable
-4 - Insérer conditions de index.py dans une fonction (module)
+
 5 - ÉCRIRE DES TESTS - unittest
     a - tester fonction dans les 4 états de comparaisons
-    b - Refactoriser Setup dans un module à part si redondances
+    
