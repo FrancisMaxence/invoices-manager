@@ -1,8 +1,8 @@
-from core.comparedir import compare_directories
+from core.comparedir import compare_folders
 
 # Loop
 # each 30 minutes
-compare_directories()
+compare_folders()
 
 #   if invoice date > 6 month:
 #       remove invoice (regex or if [date] > 6 month)

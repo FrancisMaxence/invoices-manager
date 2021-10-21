@@ -1,7 +1,7 @@
 import os
 from core.filemanager import FileManager
 
-def compare_directories():
+def compare_folders():
     fm = FileManager()
 
     scan_ho_files = os.listdir(fm.scan_ho)
