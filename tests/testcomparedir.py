@@ -1,7 +1,7 @@
 import unittest
 
-from testsetup import *
-
+import testsetup as ts
+from core.comparefolders import compare_folders
 
 class TestCompareDirectories(unittest.TestCase):
     def test_waiting_and_scan_ho_empty(self):

@@ -1,4 +1,4 @@
-from core.comparedir import compare_folders
+from core.comparefolders import compare_folders
 
 # Once at launch
 #   if invoice date > 6 month:

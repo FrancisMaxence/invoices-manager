@@ -9,11 +9,6 @@ else:
     sys.path.insert(1, os.path.dirname(os.getcwd()))
     data = '../data'
 
-# Must be importing AFTER sys.path.insert()
-from core.filemanager import FileManager
-
-fm = FileManager()
-
 archives = f'{data}/archives'
 main = f'{data}/main'
 scan_ho = f'{data}/scan-ho'
