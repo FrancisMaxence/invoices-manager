@@ -4,14 +4,9 @@ import unittest
 from testsetup import *
 
 class TestFileManager(unittest.TestCase):
-    # Try setup() to use testsetup.py
-
     def test_duplicate_file(self):
         # Setup
-        for file in files:
-            with open(f'{main}/{file}', 'a'):
-                pass
-                
+        create_files(main)
         fm.duplicate_file()
 
         # Test
@@ -19,25 +14,20 @@ class TestFileManager(unittest.TestCase):
         self.assertEqual(os.listdir(waiting), files)
 
         # Teardown
-        for file in files:
-            os.remove(f'{scan_ho}/{file}')
-            os.remove(f'{waiting}/{file}')
+        delete_files(scan_ho)
+        delete_files(waiting)
         
 
     def test_archive_files(self):
         # Setup
-        for file in files:
-            with open(f'{waiting}/{file}', 'a'):
-                pass
-        
+        create_files(waiting)
         fm.archive_files()
 
         # Test
         self.assertEqual(os.listdir(archives), files)
 
         # Teardown
-        for file in files:
-            os.remove(f'{archives}/{file}')
+        delete_files(archives)
 
 
 if __name__ == '__main__':
