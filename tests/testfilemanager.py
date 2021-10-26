@@ -8,28 +8,33 @@ fm = FileManager()
 
 class TestFileManager(unittest.TestCase):
     def test_duplicate_file(self):
-        # Setup
+        """
+        Duplicate files from main folder to Scan Ho and Waiting folders
+        """
         ts.create_files(ts.main)
         fm.duplicate_file()
 
-        # Test
-        self.assertEqual(os.listdir(ts.scan_ho), ts.files)
-        self.assertEqual(os.listdir(ts.waiting), ts.files)
+        self.assertListEqual(os.listdir(ts.main), [])
+        self.assertListEqual(os.listdir(ts.scan_ho), ts.files)
+        self.assertListEqual(os.listdir(ts.waiting), ts.files)
+        self.assertListEqual(os.listdir(ts.archives), [])
 
-        # Teardown
         ts.delete_files(ts.scan_ho)
         ts.delete_files(ts.waiting)
         
 
     def test_archive_files(self):
-        # Setup
+        """
+        Move files from waiting folder to archives folder
+        """
         ts.create_files(ts.waiting)
         fm.archive_files()
 
-        # Test
+        self.assertListEqual(os.listdir(ts.main), [])
+        self.assertListEqual(os.listdir(ts.scan_ho), [])
+        self.assertListEqual(os.listdir(ts.waiting), [])
         self.assertEqual(os.listdir(ts.archives), ts.files)
 
-        # Teardown
         ts.delete_files(ts.archives)
 
 
