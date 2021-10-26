@@ -14,7 +14,7 @@ main = f'{data}/main'
 scan_ho = f'{data}/scan-ho'
 waiting = f'{data}/waiting'
 files = ['file1.txt','file2.txt', 'file3.txt']
-second_scan = ['file4.txt']
+second_scan = ['file4.txt'] # For TestApp only
 
 
 def create_files(path):
