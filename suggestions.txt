@@ -1,5 +1,5 @@
 1 - Écrire des commentaires
 2 - Rendre le script exécutable
 3 - fonction de nettoyage des factures de plus de 6 mois
-4 - ÉCRIRE DES TESTS - unittest
+4 - Écrire des tests :
     Fonction nettoyage    

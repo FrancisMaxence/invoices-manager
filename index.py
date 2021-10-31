@@ -1,5 +1,5 @@
 import time
-import datetime
+from datetime import datetime
 
 from core.comparefolders import compare_folders
 
@@ -9,6 +9,11 @@ from core.comparefolders import compare_folders
 app = True
 
 while app:
-    print(f'Checkout: {datetime.datetime.now()}')
+    # log (Create a function for display more informations)
+    print(f'Checkout: {datetime.now()}')
+    
+    # File manager
     compare_folders()
+
+    # Time to wait
     time.sleep(1800)
