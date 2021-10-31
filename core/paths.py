@@ -2,7 +2,7 @@ import os
 
 import setup
 
-data = f'{os.environ["USERPROFILE"]}/Desktop/vincent/codes/invoices-manager/data'
+data = './data'
 pc01 = os.environ["LOGONSERVER"]
 
 main = f'{data}/main'
