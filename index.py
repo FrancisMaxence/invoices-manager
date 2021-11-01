@@ -6,6 +6,7 @@ from core.comparefolders import compare_folders
 # Once at launch
 #   if invoice date > 6 month:
 #       remove invoice (regex or if [date] > 6 month)
+
 app = True
 
 while app:
