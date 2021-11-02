@@ -74,7 +74,6 @@ class TestApp(unittest.TestCase):
         self.assertListEqual(os.listdir(ts.archives), ts.files + ts.second_scan)
 
         ts.delete_files(ts.archives)
-        os.remove(f'{ts.archives}/file4.txt')
    
 
 if __name__ == '__main__':

@@ -25,5 +25,5 @@ def create_files(path):
             pass
 
 def delete_files(path):
-    for file in files:
+    for file in os.listdir(path):
         os.remove(f'{path}/{file}')
