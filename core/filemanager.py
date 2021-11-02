@@ -1,7 +1,7 @@
 import os
 import shutil
 
-import core.paths as paths
+import utils.paths as paths
 
 class FileManager:
     def __init__(self):
