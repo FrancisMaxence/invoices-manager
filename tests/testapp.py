@@ -74,6 +74,22 @@ class TestApp(unittest.TestCase):
         self.assertListEqual(os.listdir(ts.archives), ts.files + ts.second_scan)
 
         ts.delete_files(ts.archives)
+    
+    def test_head_office_striking(self):
+        counter = 0
+        ts.create_files(ts.scan_ho)
+        ts.create_files(ts.waiting)
+
+        while counter < 5:
+            counter += compare_folders()
+            self.assertEqual(os.listdir(ts.scan_ho), os.listdir(ts.waiting))
+
+        if counter == 5:
+            print('\033[1;31;40m Is there someone at the Head Office ? \033[1;37;40m')
+            counter = 0
+        
+        ts.delete_files(ts.scan_ho)
+        ts.delete_files(ts.waiting)
    
 
 if __name__ == '__main__':
