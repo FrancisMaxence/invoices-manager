@@ -5,11 +5,13 @@ import testsetup as ts
 from core.comparefolders import compare_folders
 
 class TestCompareFolders(unittest.TestCase):
+    def setUp(self):
+        ts.create_files(ts.main)
+
     def test_waiting_and_scan_ho_empty(self):
         """
         Waiting folder and Scan Ho are empty -> duplicate_files()
         """
-        ts.create_files(ts.main)
         compare_folders()
 
         self.assertListEqual(os.listdir(ts.main), [])
@@ -24,7 +26,6 @@ class TestCompareFolders(unittest.TestCase):
         """
         Waiting folder have still files, Scan Ho folder is empty -> archive_files() then duplicate_files()
         """
-        ts.create_files(ts.main)
         ts.create_files(ts.waiting)
         compare_folders()
 
@@ -41,7 +42,6 @@ class TestCompareFolders(unittest.TestCase):
         """
         Waiting folder and Scan Ho folder have the same files -> pass
         """
-        ts.create_files(ts.main)
         ts.create_files(ts.scan_ho)
         ts.create_files(ts.waiting)
 
@@ -60,7 +60,6 @@ class TestCompareFolders(unittest.TestCase):
         """
         Waiting directory is empty but not Scan Ho directory -> pass
         """
-        ts.create_files(ts.main)
         ts.create_files(ts.scan_ho)
 
         compare_folders()
