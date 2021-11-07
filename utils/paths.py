@@ -1,6 +1,6 @@
 import os
 
-import setup
+import devsetup
 
 data = './data'
 pc01 = os.environ["LOGONSERVER"]
@@ -11,7 +11,7 @@ waiting = f'{data}/waiting'
 scan_ho = ''
 archives = ''
 
-if setup.is_dev:
+if devsetup.is_dev:
     archives = f'{data}/archives'
     scan_ho = f'{data}/scan-ho'
 else:
