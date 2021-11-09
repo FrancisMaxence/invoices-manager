@@ -36,7 +36,7 @@ class FileManager:
         for file in archives_files:
             # Convert file name in datetime object
             file_datetime = file.split('_')
-            file_date = datetime.strptime(file_datetime[1] + file_datetime[2], "%Y-%m-%d%H%M%S%f")
+            file_date = datetime.strptime(file_datetime[1] + file_datetime[2][:-4], "%Y-%m-%d%H%M%S%f")
             
             # Remove file if date is over 6 months
             if (today - file_date).days > 183:
