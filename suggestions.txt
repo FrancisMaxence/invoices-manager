@@ -1,5 +1,4 @@
-1 - Écrire des commentaires
+1 - Écrire des commentaires + doc
 2 - Rendre le script exécutable
-3 - fonction de nettoyage des factures de plus de 6 mois
-4 - Écrire des tests :
+3 - Écrire des tests :
     Fonction nettoyage    
