@@ -29,9 +29,9 @@ class FileManager:
         for waiting_file in waiting_files:
             shutil.move(f'{self.waiting}/{waiting_file}', f'{self.archives}')
     
-    def invoices_cleaner(self):
+    def invoices_cleaner(self, today=datetime.now()):
         archives_files = os.listdir(self.archives)
-        today = datetime.now() # <class 'datetime.datetime(YYYY, MMMM, DD, HH, MM, SS, mmmmmm)'>
+        #today = datetime.now() # <class 'datetime.datetime(YYYY, MMMM, DD, HH, MM, SS, mmmmmm)'>
 
         for file in archives_files:
             # Convert file name in datetime object
