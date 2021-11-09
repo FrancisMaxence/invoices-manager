@@ -38,6 +38,8 @@ class TestFileManager(unittest.TestCase):
         ts.delete_files(ts.archives)
     
     def test_invoices_cleaner(self):
+        # Pass date in 1st argument of invoices_cleaner for passing tests
+        # datetime(2021,11,9)
         pass
 
 
