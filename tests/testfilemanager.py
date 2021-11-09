@@ -36,6 +36,9 @@ class TestFileManager(unittest.TestCase):
         self.assertEqual(os.listdir(ts.archives), ts.files)
 
         ts.delete_files(ts.archives)
+    
+    def test_invoices_cleaner(self):
+        pass
 
 
 if __name__ == '__main__':
