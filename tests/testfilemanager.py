@@ -39,13 +39,16 @@ class TestFileManager(unittest.TestCase):
         ts.delete_files(ts.archives)
     
     def test_invoices_cleaner(self):
+        """
+        Remove invoices older than 6 months
+        """
         # Pass date in 1st argument of invoices_cleaner for passing tests
         today_test = datetime(2021,11,9)
         ts.create_files(ts.archives, ts.files + ts.second_scan)
 
         fm.invoices_cleaner(today_test)
         ts.files.pop(0)
-        
+
         self.assertEqual(os.listdir(ts.archives), ts.files)
 
         ts.delete_files(ts.archives)
