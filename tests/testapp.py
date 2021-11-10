@@ -44,9 +44,7 @@ class TestApp(unittest.TestCase):
         self.assertListEqual(os.listdir(ts.archives), [])
     
         # Receptionner scan a new invoice, Head Office don't took the former invoices
-        for file in ts.second_scan:
-            with open(f'{ts.main}/{file}', 'a'):
-                pass
+        ts.create_files(ts.main, ts.second_scan)
     
         compare_folders()
 

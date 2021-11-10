@@ -1,4 +1,2 @@
 1 - Écrire des commentaires + doc
 2 - Rendre le script exécutable
-3 - Écrire des tests :
-    Fonction nettoyage    
