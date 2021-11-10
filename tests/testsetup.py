@@ -18,7 +18,7 @@ files = ['file1_2020-12-25_102033568.txt','file2_2021-11-09_161545123.txt', 'fil
 second_scan = ['file4_2021-03-29_045113946.txt'] # For TestApp only
 
 
-def create_files(path):
+def create_files(path, files=files):
     for file in files:
         with open(f'{path}/{file}', 'a'):
             pass

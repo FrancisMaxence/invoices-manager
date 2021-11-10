@@ -1,5 +1,6 @@
 import os
 import unittest
+from datetime import datetime
 
 import testsetup as ts
 from core.filemanager import FileManager
@@ -39,8 +40,15 @@ class TestFileManager(unittest.TestCase):
     
     def test_invoices_cleaner(self):
         # Pass date in 1st argument of invoices_cleaner for passing tests
-        # datetime(2021,11,9)
-        pass
+        today_test = datetime(2021,11,9)
+        ts.create_files(ts.archives, ts.files + ts.second_scan)
+
+        fm.invoices_cleaner(today_test)
+        ts.files.pop(0)
+        
+        self.assertEqual(os.listdir(ts.archives), ts.files)
+
+        ts.delete_files(ts.archives)
 
 
 if __name__ == '__main__':

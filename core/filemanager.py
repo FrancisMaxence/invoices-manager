@@ -30,6 +30,7 @@ class FileManager:
             shutil.move(f'{self.waiting}/{waiting_file}', f'{self.archives}')
     
     def invoices_cleaner(self, today=datetime.now()):
+        # Second argument is required for tests
         archives_files = os.listdir(self.archives)
         #today = datetime.now() # <class 'datetime.datetime(YYYY, MMMM, DD, HH, MM, SS, mmmmmm)'>
 
