@@ -65,7 +65,7 @@ class TestApp(unittest.TestCase):
         self.assertListEqual(os.listdir(ts.archives), ts.files)
 
         # Head office took the next invoices
-        os.remove(f'{ts.scan_ho}/file4.txt')
+        os.remove(f'{ts.scan_ho}/{ts.second_scan[0]}')
         compare_folders()
 
         self.assertListEqual(os.listdir(ts.main), [])
