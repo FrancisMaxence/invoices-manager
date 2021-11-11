@@ -1,17 +1,18 @@
 import time
 from datetime import datetime
 
+from core.filemanager import FileManager
 from core.comparefolders import compare_folders
 
-# Once at launch
-#   if invoice date > 6 month:
-#       remove invoice (regex or if [date] > 6 month)
 
 app = True
 counter = 0
+fm = FileManager()
+
+# Remove invoices older than 6 months
+fm.invoices_cleaner()
 
 while app:
-    # log (Create a function for display more informations)
     print(f'Checkout: {datetime.now()}')
     
     # File manager
