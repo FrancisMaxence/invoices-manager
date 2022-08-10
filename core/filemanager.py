@@ -32,7 +32,7 @@ class FileManager:
     def invoices_cleaner(self, today=datetime.now()):
         # Second argument is required for tests
         archives_files = os.listdir(self.archives)
-        #today = datetime.now() # <class 'datetime.datetime(YYYY, MMMM, DD, HH, MM, SS, mmmmmm)'>
+        #today = datetime.now() # <class 'datetime.datetime(YYYY, MMMM, DD, HH, MM, SS, mmm)'>
 
         for file in archives_files:
             # Convert file name in datetime object
